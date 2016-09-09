@@ -6,6 +6,8 @@ For detailed information have a look at our website [IAFC](http://anshuchak063.w
 
 To get started with the aplication development process, we have created a basic framework for our website. The framework is a basic fraud detector, it classifies the query entered by the client as fraud or genuine(N/F). The output includes the top classification and a confidence score. The framework is build on [IBM Bluemix](https://new-console.ng.bluemix.net/) and uses the [Watson's Natural Language Classifier](https://www.ibm.com/watson/developercloud/nl-classifier.html). Here, the classifier is trained to determine whether the phrase is related to fraud or genuine(N/F).
 
+[Framework](https://iafc-sid-app.mybluemix.net/)
+
 ## Useful Commands
 
 1. Cloud-foundry [CLI](https://github.com/cloudfoundry/cli) must be installed.  
