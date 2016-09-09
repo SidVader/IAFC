@@ -14,8 +14,11 @@ To get started with the aplication development process, we have created a basic 
 
 	```sh
 	$ cf api https://api.ng.bluemix.net
+    
 	$ cf login -u <your user ID> 
+    
     If cf login throws an error than try -
+    
     $ cf auth <your user ID> <password>
 	```
 
@@ -42,7 +45,7 @@ To get started with the aplication development process, we have created a basic 
     ```  
    
    Take note of the `<classifier-id>`.
-1. To configure the [app.js](app.js#L48) file to use your classifier, export the classifier ID as an environment variable.
+1. Configure the [app.js](app.js#L48) file to use the new classifier, export the classifier ID as an environment variable.
 
 	```sh
 	$ cf set-env <application-name> CLASSIFIER_ID <classifier-id>
@@ -54,79 +57,13 @@ To get started with the aplication development process, we have created a basic 
 	$ cf restage <application-name>
 	```
 
-	For more details about developing applications that use Watson Developer Cloud services in Bluemix, see [Getting started with Watson Developer Cloud and Bluemix][getting_started].
-
-## Running locally
-1. Download and install [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
-
-1. Create an instance of the Natural Language Classifier service on Bluemix.
-
-1. [Create and train](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/nl-classifier/get_start.shtml#create) the NLC service using, for example, the weather training data. Note the value of the `Classifier ID` in the response.
-
-1. Configure the code to connect to your service:
-
-	1. Copy the credentials from your `natural-language-classifier-standard` service in Bluemix. Run the following command:
-
-		```sh
-		$ cf env <application-name>
-		```
-
-		Example output:
-
-		```sh
-		System-Provided:
-		{
-		  "VCAP_SERVICES": {
-			"natural_language_classifier": [
-			  {
-				"credentials": {
-				  "password": "<password>",
-				  "url": "<url>",
-				  "username": "<username>"
-				}
-				"label": "natural-language-classifier",
-				"name": "natural-language-classifier-standard",
-				"plan": "standard",
-				"tags": [
-				  ...
-				]
-			  }
-			]
-		  }
-		}
-		```
-
-	1. Copy `username`, `password`, and `url` from the credentials.
-	1. Open the `app.js` file and paste the username, password, and url credentials for the service.
-	1. In the `app.js` file paste the "Classifier ID". Save the `app.js` file.
-
-
-1. Install the Natural Language Classifier Node.js package:
-	1. Change to the new directory that contains the project.
-	2. Run the following command:node
-
-	```node
-	$ npm install
-	```
-
-1. Run the following command to start the application:
-
-	```node
-	npm start
-	```
-
-1. Point your browser to [http://localhost:3000](http://localhost:3000).
-
-1. Train the classifier, if you haven't already. See the step earlier under Getting started.
-
-
 ## Troubleshooting
 
 * The main source of troubleshooting and recovery information is the Bluemix log. To view the log, run the following command:
 
-  ```sh
-  $ cf logs <application-name> --recent
-  ```
+    ```sh
+    $ cf logs <application-name> --recent
+    ``` 
 
 * For more details about the service, see the [documentation][nlc_docs] for the Natural Language Classifier.
 
