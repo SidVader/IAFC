@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/SidVader/IAFC.svg?token=xQ7QHpWuemqpAbwTzzww&branch=master)](https://travis-ci.com/SidVader/IAFC)
+
 # IAFC - India Against Frauds and Corrupts
 
 IAFC, aims to help people fight corruption.Our services include collection and aggregation of data related to scams and frauds, simplification of filing of cases pertaining to illegal issues and using machine learning for swift detection of the same.
