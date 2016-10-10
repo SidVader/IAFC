@@ -1,11 +1,12 @@
-declared-services:
-  natural-language-classifier-standard:
-    label: natural_language_classifier
-    plan: standard
 applications:
-- services:
-  - natural-language-classifier-standard
-  name: iafc-sid-app
-  command: npm start
-  path: .
+- path: .
   memory: 512M
+  instances: 1
+  domain: au-syd.mybluemix.net
+  name: iafc-aij
+  host: iafc-aij
+  disk_quota: 1024M
+  services:
+  - iafc-db-cloudantNoSQLDB
+  - natural-language-classifier-standard
+
