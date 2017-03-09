@@ -1,7 +1,7 @@
 {
-  "name": "natural-language-classifier-nodejs",
+  "name": "IAFC",
   "version": "1.0.0",
-  "description": "IBM Watson Natural Language Classifier sample",
+  "description": "IAFC is a crowdsourced corruption database.",
   "dependencies": {
     "body-parser": "~1.15.0",
     "cf-deployment-tracker-client": "0.0.8",
@@ -22,25 +22,7 @@
     "nock": "7.7.0",
     "supertest": "^1.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/watson-developer-cloud/natural-language-classifier-nodejs.git"
-  },
-  "author": "IBM Corp.",
-  "contributors": [
-    {
-      "name": "Venkat Ganesh Sekar",
-      "email": "vganeshs@us.ibm.com"
-    },
-    {
-      "name": "German Attanasio Ruiz",
-      "email": "germanatt@us.ibm.com"
-    }
-  ],
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/watson-developer-cloud/natural-language-classifier-nodejs/issues"
-  },
+  "author": "Siddhant",
   "scripts": {
     "start": "node server.js",
     "test": "npm run jshint && (npm run codecov || true)",
